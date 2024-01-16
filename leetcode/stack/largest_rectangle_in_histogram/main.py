@@ -22,14 +22,12 @@ class Solution:
                     max_area,
                     self.area((i - stack[-1] - 1) if stack else i, curr_height),
                 )
-            print([heights[i] for i in stack], max_area)
 
         while stack:
             curr_height = heights[stack.pop()]  # current min height
             max_area = max(
                 max_area, self.area((i - stack[-1] - 1) if stack else i, curr_height)
             )
-            print([heights[i] for i in stack], max_area)
 
         return max_area
 
