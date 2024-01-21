@@ -1,6 +1,5 @@
 from typing import Optional
 from trees import BinaryTreeNode as TreeNode
-from collections import deque
 
 
 class Solution:
