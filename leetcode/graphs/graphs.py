@@ -14,12 +14,14 @@ class GraphNode:
 
     def print_all_nodes(self):
         dq = deque([self])
-        visited = set([self])
+        visited = set()
 
         while dq:
             node = dq.popleft()
 
-            print(node)
+            if node not in visited:
+                visited.add(node)
+                print(node)
 
             for neighbor in node.neighbors:
                 if neighbor not in visited:
