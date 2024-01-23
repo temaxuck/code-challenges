@@ -3,6 +3,9 @@ from collections import deque
 
 class GraphNode:
     def __init__(self, val=0, neighbors=None):
+        if not neighbors:
+            neighbors = []
+
         self.val = val
         self.neighbors = neighbors
 
