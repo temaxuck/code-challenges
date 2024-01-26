@@ -7,12 +7,11 @@ class Solution:
         cache = {n: 1}
 
         def helper(i):
-            print(i, cache)
             if i in cache:
                 return cache[i]
 
             if s[i] == "0":
-                return
+                return 0
 
             res = helper(i + 1)
 
@@ -20,9 +19,9 @@ class Solution:
                 res += helper(i + 2)
 
             cache[i] = res
-            return res
+            return res or 0
 
         return helper(0)
 
 
-print(Solution().numDecodings("06"))
+print(Solution().numDecodings("10"))
